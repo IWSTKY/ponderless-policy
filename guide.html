@@ -6,18 +6,17 @@
   <title>Ponderless - How It Works</title>
   <style>
     :root {
-      --bg: #000000;
-      --card: #111111;
+      --bg: #000;
+      --card: #111;
       --text: #f5f5f5;
       --muted: #bdbdbd;
       --accent: #ffd84d;
       --line: #2a2a2a;
       --link: #7db7ff;
+      --button: #2f80ff;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -29,7 +28,7 @@
 
     .container {
       width: 100%;
-      max-width: 880px;
+      max-width: 920px;
       margin: 0 auto;
       padding: 24px 16px 56px;
     }
@@ -51,7 +50,6 @@
 
     p {
       margin: 0 0 16px;
-      color: var(--text);
     }
 
     .muted {
@@ -66,10 +64,6 @@
       margin-bottom: 28px;
     }
 
-    .hero p:last-child {
-      margin-bottom: 0;
-    }
-
     .badge {
       display: inline-block;
       font-size: 0.9rem;
@@ -81,10 +75,16 @@
       margin-bottom: 14px;
     }
 
+    .hero-copy {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
     .quick-steps {
       display: grid;
       gap: 12px;
-      margin: 20px 0 8px;
+      margin-top: 20px;
     }
 
     .quick-step {
@@ -96,10 +96,6 @@
 
     .quick-step strong {
       color: var(--accent);
-    }
-
-    .section {
-      margin-top: 28px;
     }
 
     .step-card {
@@ -131,28 +127,23 @@
       background: #000;
     }
 
-    .faq {
-      margin-top: 18px;
-      display: grid;
-      gap: 12px;
+    .cta {
+      margin-top: 36px;
+      background: #0d1624;
+      border: 1px solid #20314f;
+      border-radius: 18px;
+      padding: 20px;
     }
 
-    details {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px 16px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    details p {
-      margin-top: 12px;
-      margin-bottom: 0;
-      color: var(--muted);
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--button);
+      color: #fff;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-decoration: none;
     }
 
     a {
@@ -172,32 +163,9 @@
       font-size: 0.95rem;
     }
 
-    .cta {
-      margin-top: 28px;
-      background: #0d1624;
-      border: 1px solid #20314f;
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    .cta a.button {
-      display: inline-block;
-      margin-top: 12px;
-      background: #2f80ff;
-      color: #fff;
-      font-weight: 700;
-      padding: 12px 16px;
-      border-radius: 12px;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin-top: 8px;
-    }
-
-    li {
-      margin-bottom: 8px;
-      color: var(--muted);
+    @media (max-width: 640px) {
+      h1 { font-size: 1.7rem; }
+      h2 { font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -205,153 +173,91 @@
   <main class="container">
     <section class="hero">
       <div class="badge">Ponderless Guide</div>
-      <h1>How to measure lap times with Ponderless</h1>
-      <p>
-        Ponderless is an AI-powered lap timer that measures rider passes using a single iPhone camera.
+      <h1>How Ponderless works</h1>
+      <p class="hero-copy">
+        Ponderless is a gate-free lap timer for motocross and enduro practice.
+        Just place your iPhone beside the track, ride past the camera, and review the captured passes afterward.
       </p>
-      <p>
-        No transponder. No timing gate. Just place your phone beside the track and ride.
-      </p>
-      <p class="muted">
-        Designed for motocross, enduro, and solo practice sessions.
+      <p class="hero-copy">
+        No transponder. No timing gate. Just a phone.
       </p>
 
       <div class="quick-steps">
-        <div class="quick-step"><strong>1.</strong> Place your phone beside the track</div>
-        <div class="quick-step"><strong>2.</strong> Start detection and ride past the camera</div>
+        <div class="quick-step"><strong>1.</strong> Set the line and start detection</div>
+        <div class="quick-step"><strong>2.</strong> Ride past the camera</div>
         <div class="quick-step"><strong>3.</strong> Open the pass list after your ride</div>
-        <div class="quick-step"><strong>4.</strong> Select photos to calculate lap times</div>
+        <div class="quick-step"><strong>4.</strong> Select passes to calculate lap times</div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Step-by-step guide</h2>
-      <p class="muted">
-        The images below show the typical flow inside the app.
-      </p>
+    <section>
+      <h2>Step-by-step</h2>
 
       <article class="step-card">
         <div class="step-label">Step 1</div>
-        <h3>Place your phone and set the pass line</h3>
+        <h3>Set the line and start detection</h3>
         <p>
-          Put your iPhone beside the track where riders pass clearly in front of the camera.
-          Adjust the detection line to the spot you want riders to cross.
+          Place your phone where riders pass clearly in front of the camera.
+          Adjust the pass line, start detection, ride past the camera, and then open the pass list after the ride.
         </p>
-        <img src="images/guide-step-1.jpg" alt="Ponderless setup screen showing where to place the phone and set the pass line">
+        <img src="images/1.png" alt="Ponderless guide image showing set the line, start detection, pass in front of camera, and open the pass list">
       </article>
 
       <article class="step-card">
         <div class="step-label">Step 2</div>
-        <h3>Start detection and ride past the camera</h3>
+        <h3>View passes in time order</h3>
         <p>
-          Tap the start button, then ride. Ponderless records pass moments automatically as riders cross the line.
+          The pass list shows captured pass photos sorted by time. Tap each pass to inspect it more closely.
         </p>
-        <img src="images/guide-step-2.jpg" alt="Ponderless detection screen while a rider passes in front of the camera">
+        <img src="images/2.png" alt="Ponderless pass list screen showing captured pass photos in time order">
       </article>
 
       <article class="step-card">
         <div class="step-label">Step 3</div>
-        <h3>Open the pass list after your ride</h3>
+        <h3>Select passes and calculate lap times</h3>
         <p>
-          The pass list shows captured pass photos in time order. Tap a photo to check it more closely.
+          Select two or more passes from the same rider to calculate lap times and check the lap result summary.
         </p>
-        <img src="images/guide-step-3.jpg" alt="Pass list screen showing captured pass photos sorted by time">
-      </article>
-
-      <article class="step-card">
-        <div class="step-label">Step 4</div>
-        <h3>Select photos to calculate lap times</h3>
-        <p>
-          Choose two or more pass photos from the same rider, then calculate the lap times from those timestamps.
-        </p>
-        <img src="images/guide-step-4.jpg" alt="Selection screen showing multiple pass photos chosen for lap time calculation">
-      </article>
-
-      <article class="step-card">
-        <div class="step-label">Result</div>
-        <h3>Check your lap results</h3>
-        <p>
-          Ponderless shows your lap summary, including average, best, and each lap interval.
-        </p>
-        <img src="images/guide-step-5.jpg" alt="Lap result screen showing average, best lap, and lap intervals">
-      </article>
-    </section>
-
-    <section class="section">
-      <h2>Pro features</h2>
-      <p class="muted">
-        The Pro version adds extra tools for more convenient tracking and review.
-      </p>
-
-      <article class="step-card">
-        <div class="step-label">Pro</div>
-        <h3>Video mode, direction setting, and auto match</h3>
-        <p>
-          Pro includes video recording, rider direction switching, and automatic search for the same rider among saved passes.
-        </p>
-        <img src="images/guide-pro-1.jpg" alt="Pro feature screen showing video mode, direction settings, and auto match">
+        <img src="images/3.png" alt="Ponderless selection and lap result screen">
       </article>
 
       <article class="step-card">
         <div class="step-label">Pro</div>
-        <h3>Auto match candidates and session save</h3>
+        <h3>Use Pro features for easier matching and session management</h3>
         <p>
-          After auto match, review the suggested candidates, select the correct ones, and save them as a session.
+          Pro adds video mode, rider direction setting, auto match, and session save features for easier workflow.
         </p>
-        <img src="images/guide-pro-2.jpg" alt="Auto match result screen showing candidate photos and session save button">
+        <img src="images/4.png" alt="Ponderless Pro feature overview">
       </article>
 
       <article class="step-card">
         <div class="step-label">Pro</div>
-        <h3>Save and manage lap sessions</h3>
+        <h3>Review Auto Match suggestions</h3>
         <p>
-          Saved sessions make it easier to keep records organized and revisit past lap results later.
+          Check the suggested candidates, choose the correct passes, and save the result as a session.
         </p>
-        <img src="images/guide-pro-3.jpg" alt="Session list and lap report screens showing saved lap management">
+        <img src="images/5.png" alt="Ponderless Auto Match screen showing suggestions and session save">
       </article>
-    </section>
 
-    <section class="section">
-      <h2>FAQ</h2>
-      <div class="faq">
-        <details>
-          <summary>Do I need a transponder or timing gate?</summary>
-          <p>No. Ponderless is designed to work with just an iPhone camera.</p>
-        </details>
-
-        <details>
-          <summary>Is it for motocross only?</summary>
-          <p>It is designed for motocross, enduro, and practice riding where a single camera setup is useful.</p>
-        </details>
-
-        <details>
-          <summary>Can I use it when riding alone?</summary>
-          <p>Yes. That is one of the main use cases. Place the phone, ride, then review the captured passes after the session.</p>
-        </details>
-
-        <details>
-          <summary>How do I get help?</summary>
-          <p>
-            Contact support at
-            <a href="mailto:itk.per.dev@gmail.com">itk.per.dev@gmail.com</a>.
-          </p>
-        </details>
-      </div>
+      <article class="step-card">
+        <div class="step-label">Pro</div>
+        <h3>Save and manage sessions</h3>
+        <p>
+          Saved sessions help you keep lap results organized and easier to revisit later.
+        </p>
+        <img src="images/6.png" alt="Ponderless session list and lap report screen">
+      </article>
     </section>
 
     <section class="cta">
       <h2>Try Ponderless</h2>
-      <p>
-        Measure lap times by yourself with just an iPhone.
-      </p>
-      <a class="button" href="https://apps.apple.com/us/app/ponderless-lap-timer/id6760590338">
-        View on the App Store
-      </a>
+      <p>Measure lap times by yourself with just an iPhone.</p>
+      <a class="button" href="https://apps.apple.com/us/app/ponderless-lap-timer/id6760590338">View on the App Store</a>
     </section>
 
     <footer class="footer">
       <p>
-        Need help? Contact
+        Need help? Visit the <a href="support.html">support page</a> or contact
         <a href="mailto:itk.per.dev@gmail.com">itk.per.dev@gmail.com</a>
       </p>
     </footer>
